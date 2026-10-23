@@ -1,5 +1,13 @@
 n = int(input("Введите трехзначное число: "))
 
+while type(n) != int:
+    try:
+        n = int(n)
+    except ValueError:
+        print("число введено неппраивльо")
+        n = int(input("Введите трехзначное число: "))
+
+
 last = n % 10
 
 first = n // 10
